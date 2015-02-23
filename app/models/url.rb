@@ -37,13 +37,6 @@ class Url < ActiveRecord::Base
     end
 
     most_popular = (referrals.group_by {|i| i}).sort.reverse.flatten.uniq.first
-    # binding.pry
-    #
-    # popularity_by_num = most_popular.each_with_index do |referrer, index|
-    #   (index + 1) + ". " + referrer
-    # end
-    #
-    # make_lines_readable(popularity_by_num)
   end
 
   def self.popular_user_agent_browser(webpage)

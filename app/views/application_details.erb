@@ -1,6 +1,6 @@
 <%= partial "partial" %>
 
-<h2><%= @identifier %> Page Statistics</h2>
+<h2><%= @identifier.capitalize %> Page Statistics</h2>
 <h3 id="pages-by-popularity">Pages by popularity</h3>
 <table>
   <tr>
@@ -51,12 +51,12 @@
 </table>
 
 <h2 id="local-links">
-  <a href="/sources/<%= @identifier %>/events"><%= @identifier %> Events </a>
+  <a href="/sources/<%= @identifier %>/events"><%= @identifier.capitalize %> Events </a>
 </h2>
-<h2>
+<br>
+<h2>Data by URL</h2>
   <% @paths.each do |path| %>
-    <span>
+    <h4>
       <a href="/sources/<%= @identifier %>/urls<%= path %>"><%= @identifier + ".com" + path %></a>
-    </span>
+    </h4>
   <% end %>
-</h2>
