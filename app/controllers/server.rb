@@ -1,4 +1,5 @@
 require 'json'
+require 'sinatra/partial'
 
 module TrafficSpy
   class Server < Sinatra::Base
