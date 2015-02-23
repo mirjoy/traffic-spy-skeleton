@@ -18,10 +18,12 @@ require APP_ROOT.join('config', 'database')
 # configure Server settings
 module TrafficSpy
   class Server < Sinatra::Base
+    register Sinatra::Partial
     set :method_override, true
     set :root, APP_ROOT.to_path
     set :views, File.join(TrafficSpy::Server.root, "app", "views")
     set :public_folder, File.join(TrafficSpy::Server.root, "app", "public")
     set :partial_template_engine, :erb
+    enable :partial_underscores
   end
 end

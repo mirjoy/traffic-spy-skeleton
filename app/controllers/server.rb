@@ -1,8 +1,8 @@
 require 'json'
-require 'sinatra/partial'
 
 module TrafficSpy
   class Server < Sinatra::Base
+
     get '/' do
       erb :index
     end
